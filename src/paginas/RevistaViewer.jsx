@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "https://api.santaisabel2.com/api"; // backend real
+const API_URL = "http://localhost:3000/api"; // backend local
 
 const RevistaViewer = () => {
   const [revistas, setRevistas] = useState([]);

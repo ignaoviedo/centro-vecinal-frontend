@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "https://api.santaisabel2.com/api";
+const API_URL = "http://localhost:3000/api";
 
 const RevistaDetalle = () => {
   const { id } = useParams();
@@ -62,7 +62,7 @@ const RevistaDetalle = () => {
       {/* 🔹 Página actual */}
       <div className="mb-4">
         <img
-          src={`https://api.santaisabel2.com${revista.imagenes[currentPage]}`}
+          src={`http://localhost:3000${revista.imagenes[currentPage]}`}
           alt={`Página ${currentPage + 1}`}
           className="w-full shadow-lg rounded-lg"
         />

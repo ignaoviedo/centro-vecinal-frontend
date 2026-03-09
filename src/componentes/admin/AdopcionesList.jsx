@@ -4,7 +4,7 @@ import axios from "axios";
 import { Trash2 } from "lucide-react";
 import Swal from "sweetalert2";
 
-const API_URL = "https://api.santaisabel2.com/api";
+const API_URL = "http://localhost:3000/api";
 
 const AdopcionesList = () => {
   const [adopciones, setAdopciones] = useState([]);

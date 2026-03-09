@@ -29,7 +29,7 @@ const BannerAuspiciantes = () => {
     fetchBanners();
   }, []);
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   if (loading) {
     return <div>Cargando banners de auspiciantes...</div>;
@@ -52,7 +52,7 @@ const BannerAuspiciantes = () => {
           >
             <div className="w-full h-full bg-white">
               <img
-                src={`${BASE_IMG_URL}${banner.imagen_url}`}
+                src={banner.imagen_url}
                 alt={banner.descripcion || "Auspiciantes"}
                 className="w-full h-full object-cover"
               />

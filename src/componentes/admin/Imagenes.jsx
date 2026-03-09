@@ -87,7 +87,7 @@ function Imagenes() {
     setPaginaActual(numero);
   };
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <div className="min-h-screen flex justify-center items-center p-4 sm:p-6">
@@ -135,11 +135,7 @@ function Imagenes() {
                     >
                       <td className="px-4 py-4 whitespace-nowrap">
                         <img
-                          src={
-                            imagen.imagen_url
-                              ? `${BASE_IMG_URL}${imagen.imagen_url}`
-                              : "https://via.placeholder.com/64"
-                          }
+                          src={imagen.imagen_url}
                           alt={imagen.descripcion || "Imagen"}
                           className="h-16 w-16 object-cover rounded-lg border border-white/20"
                         />

@@ -1,1 +1,2 @@
-export const API_URL = "https://api.santaisabel2.com/api";
+export const API_URL = "http://localhost:3000/api";
+export const BASE_IMG_URL = "http://localhost:3000";

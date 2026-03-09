@@ -244,7 +244,7 @@ import { useNavigate } from "react-router-dom";
 import { Eye, Download } from "lucide-react"; // 👈 icono de descarga
 
 // Base común para todas las llamadas al API
-const API_URL = "https://api.santaisabel2.com/api";
+const API_URL = "http://localhost:3000/api";
 
 const RevistaLista = () => {
   const [revistas, setRevistas] = useState([]);

@@ -30,7 +30,7 @@ const NovedadDetalle = () => {
 
   if (!novedad) return <p className="text-center mt-10">Cargando novedad...</p>;
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
   return (
     <>
       <h2 className="text-3xl font-bold text-[#002c73] text-center mb-10 uppercase px-4">
@@ -53,11 +53,7 @@ const NovedadDetalle = () => {
           {/* Imagen */}
           <div className="flex justify-center mb-6">
             <img
-              src={
-                novedad.imagen_url
-                  ? `${BASE_IMG_URL}${novedad.imagen_url}`
-                  : "https://via.placeholder.com/800x450"
-              }
+              src={novedad.imagen_url}
               alt={novedad.titulo}
               className="w-full max-w-3xl h-auto rounded-xl shadow-md object-cover"
             />

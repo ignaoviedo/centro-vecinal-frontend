@@ -225,7 +225,7 @@ const Inicio = () => {
     });
   };
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <div>
@@ -416,11 +416,7 @@ const Inicio = () => {
                     >
                       <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all h-[28rem] flex flex-col">
                         <img
-                          src={
-                            novedad.imagen_url
-                              ? `${BASE_IMG_URL}${novedad.imagen_url}`
-                              : "https://via.placeholder.com/300x200"
-                          }
+                          src={novedad.imagen_url}
                           alt={novedad.titulo}
                           className="object-cover w-full h-64"
                         />
@@ -450,10 +446,10 @@ const Inicio = () => {
           {imagenes.map((img, index) => (
             <img
               key={index}
-              src={`${BASE_IMG_URL}${img.imagen_url}`} // URL completa usando la constante
+              src={img.imagen_url} // URL completa usando la constante
               alt={`Galería ${index + 1}`}
               className="w-full max-w-xs sm:max-w-none h-48 sm:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform duration-300"
-              onClick={() => openLightbox(`${BASE_IMG_URL}${img.imagen_url}`)}
+              onClick={() => openLightbox(img.imagen_url)}
             />
           ))}
         </div>

@@ -34,7 +34,7 @@ const Banner = () => {
   if (banners.length === 0) return <div>No hay banners para mostrar</div>;
 
   // URL base para las imágenes (solo dominio)
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw] h-64 sm:h-80 xl:h-96 2xl:h-[30rem] -mt-6">
@@ -42,7 +42,7 @@ const Banner = () => {
         {banners.map((banner) => (
           <img
             key={banner.id}
-            src={`${BASE_IMG_URL}${banner.imagen_url}`}
+            src={banner.imagen_url}
             alt={banner.descripcion || "Banner"}
             className="w-full h-full object-cover"
           />

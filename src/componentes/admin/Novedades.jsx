@@ -67,7 +67,7 @@ function Novedades() {
     }
   };
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <div className="min-h-screen flex justify-center items-center p-4 sm:p-6">
@@ -119,11 +119,7 @@ function Novedades() {
                       <td className="px-4 py-4 whitespace-nowrap">
                         {novedad.imagen_url ? (
                           <img
-                            src={
-                              novedad.imagen_url
-                                ? `${BASE_IMG_URL}${novedad.imagen_url}`
-                                : "https://via.placeholder.com/64"
-                            }
+                            src={novedad.imagen_url}
                             alt={novedad.titulo}
                             className="h-16 w-16 object-cover rounded-lg border border-white/20"
                           />

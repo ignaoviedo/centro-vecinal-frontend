@@ -67,7 +67,7 @@ function MascotasGestor() {
     }
   };
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <div className="min-h-screen flex justify-center items-center p-4 sm:p-6">
@@ -119,11 +119,7 @@ function MascotasGestor() {
                       <td className="px-4 py-4 whitespace-nowrap">
                         {mascota.imagen_url ? (
                           <img
-                            src={
-                              mascota.imagen_url
-                                ? `${BASE_IMG_URL}${mascota.imagen_url}`
-                                : "https://via.placeholder.com/64"
-                            }
+                            src={mascota.imagen_url}
                             alt={mascota.nombre}
                             className="h-16 w-16 object-cover rounded-lg border border-white/20"
                           />

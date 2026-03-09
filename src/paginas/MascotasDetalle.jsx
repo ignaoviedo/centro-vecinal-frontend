@@ -23,7 +23,7 @@ const MascotaDetalle = () => {
 
   if (!mascota) return <p className="text-center mt-10">Cargando mascota...</p>;
 
-  const BASE_IMG_URL = "https://api.santaisabel2.com";
+  const BASE_IMG_URL = "http://localhost:3000";
 
   return (
     <>
@@ -98,11 +98,7 @@ const MascotaDetalle = () => {
           {/* Imagen */}
           <div className="flex justify-center mb-6">
             <img
-              src={
-                mascota.imagen_url
-                  ? `${BASE_IMG_URL}${mascota.imagen_url}`
-                  : "https://via.placeholder.com/800x450"
-              }
+              src={mascota.imagen_url}
               alt={mascota.nombre || "Mascota"}
               className="w-full max-w-3xl h-auto rounded-xl shadow-md object-cover"
             />
