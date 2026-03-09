@@ -45,6 +45,7 @@ El sistema permite mostrar novedades del barrio, mascotas perdidas o encontradas
 ---
 
 # 📂 Estructura del Proyecto
+```
 proyectocentrovecinal
 │
 ├── src
@@ -68,6 +69,7 @@ proyectocentrovecinal
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+```
 
 
 ---
